@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hover {
+    --s: 0.2em;   /* the thickness of the line */
+    --c: primary; /* the color */
+    --p: 0%;
+    
+    color: #0000;
+    padding-bottom: var(--s);
+    background: 
+      linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--p,0%))/200% 100%,
+      linear-gradient(var(--c) 0 0) 0% 100%/var(--p,0%) var(--s) no-repeat;
+    -webkit-background-clip: text,padding-box;
+            background-clip: text,padding-box;
+    transition: 0.5s;
+  }
+  .hover:hover {
+    --_p: 100%
+  }
+
+  .container {
+    /* position: absolute; */
+    transform: translate(-2%, 20%);
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #EA1C2C;
+  }
